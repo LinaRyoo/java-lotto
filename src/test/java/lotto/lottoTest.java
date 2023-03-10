@@ -17,7 +17,6 @@ import static org.assertj.core.api.Assertions.*;
 
 
 public class lottoTest {
-
     private static final int price = 1000;
     public int money;
     public List<Integer> numbers;
@@ -86,4 +85,6 @@ public class lottoTest {
     void validateMoney(int input) {
         assertThat(input % price).isNotEqualTo(0);
     }
+
+
 }

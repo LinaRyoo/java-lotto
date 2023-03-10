@@ -4,10 +4,12 @@ package lotto;
 public class MoneyToBuy {
     private static final int UNIT = 1000;
     private final int value;
+    private int TicketCount;
 
     private MoneyToBuy(final int value) {
         validate(value);
         this.value = value;
+        this.TicketCount = lottoTicketsCount();
     }
 
     public static MoneyToBuy from(final int value) {
@@ -24,6 +26,6 @@ public class MoneyToBuy {
     }
 
     public int lottoTicketsCount() {
-        return value / UNIT;
+        return this.value / UNIT;
     }
 }
